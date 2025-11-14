@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-t*6kpybgveof-+43a5vn7=m9on@)ws=&+qqi$c32sl5&n!(#&)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['web-production-f3fda.up.railway.app', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -118,7 +119,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 CSRF_TRUSTED_ORIGINS = [
     'https://web-production-f3fda.up.railway.app'
-    'http://web-production-f3fda.up.railway.app',
+
 ]
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
