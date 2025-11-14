@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+
+<div class="text-center mt-4">
+
+    <h1 class="display-5 fw-bold">Bienvenido a Tiendas Castillo </h1>
+    <p class="lead mt-3">
+        Sistema de administración de Productos y Categorías
+    </p>
+
+    <div class="mt-4">
+        <a href="/categorias/" class="btn btn-primary btn-lg m-2">Ver Categorías</a>
+        <a href="/productos/" class="btn btn-success btn-lg m-2">Ver Productos</a>
+    </div>
+
+</div>
+
+<hr class="my-5">
+
+<div class="row text-center">
+
+    <div class="col-md-4">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h4>Categorías</h4>
+                <p>Administra las categorías que organizan tus productos.</p>
+                <a href="/categorias/" class="btn btn-primary">Ir a Categorías</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h4>Productos</h4>
+                <p>Agrega, edita y administra todos tus productos.</p>
+                <a href="/productos/" class="btn btn-success">Ir a Productos</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h4>Créditos</h4>
+                <p>Información del creador del diseño.</p>
+                <a href="/creditos/" class="btn btn-secondary">Ver Créditos</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

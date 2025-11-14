@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Categorías{% endblock %}
+
+{% block content %}
+
+<h2 class="mb-4">
+    {% if categoria %}Editar Categoría{% else %}Nueva Categoría{% endif %}
+</h2>
+
+<form method="POST">
+    {% csrf_token %}
+
+    <div class="mb-3">
+        <label>Nombre</label>
+        <input type="text" class="form-control"
+               name="nombre"
+               value="{{ categoria.nombre|default:'' }}"
+               required>
+    </div>
+
+    <div class="mb-3">
+        <label>Descripción</label>
+        <textarea class="form-control"
+                  name="descripcion"
+                  rows="3">{{ categoria.descripcion|default:'' }}</textarea>
+    </div>
+
+    <button class="btn btn-success">Guardar</button>
+    <a href="{% url 'categorias_listado' %}" class="btn btn-secondary">Cancelar</a>
+
+</form>
+
+{% endblock %}
