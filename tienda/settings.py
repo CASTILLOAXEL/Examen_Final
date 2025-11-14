@@ -116,6 +116,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
+CSRF_TRUSTED_ORIGINS = [
+    'https://web-production-f3fda.up.railway.app'
+    'http://web-production-f3fda.up.railway.app',
+]
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 
